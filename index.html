@@ -34,7 +34,7 @@
       <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
       <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
       <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
+        <a href="#" class="btn signup" id="signup-btn">新規登録はこちら</a>
         <p>or</p>
         <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
         <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
@@ -94,5 +94,18 @@
       <p>Learn to Code, Learn to be Creative.</p>
     </div>
   </footer>
+  <script>
+  // ボタンを取得
+  const signupBtn = document.getElementById("signup-btn");
+
+  // クリック時にGAにイベント送信
+  signupBtn.addEventListener("click", function() {
+    gtag('event', 'signup_click', {     // イベント名は任意
+      'event_category': 'button',       // カテゴリ
+      'event_label': 'top_signup_btn'   // ラベル
+    });
+  });
+</script>
+
 </body>
 </html>
